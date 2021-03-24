@@ -47,7 +47,7 @@ AUD_PlayerCharacter::AUD_PlayerCharacter()
 	CursorToWorld = CreateDefaultSubobject<UDecalComponent>("CursorToWorld");
 	CursorToWorld->SetupAttachment(RootComponent);
 
-	static ConstructorHelpers::FObjectFinder<UMaterial> _cursorMaterial(TEXT("Material'/Game/Blueprints/Cursor_Decal.Cursor_Decal'"));
+	static ConstructorHelpers::FObjectFinder<UMaterial> _cursorMaterial(TEXT("Material'/Game/Blueprints/Materials/Cursor_Decal.Cursor_Decal'"));
 
 	if (_cursorMaterial.Succeeded())
 		CursorToWorld->SetDecalMaterial(_cursorMaterial.Object);

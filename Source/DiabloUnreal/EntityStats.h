@@ -68,4 +68,7 @@ public:
 	void SetLife(float _life);
 	void SetMana(float _mana);
 
+	int GetLife() { return life; };
+	int GetMana() { return mana; };
+
 };

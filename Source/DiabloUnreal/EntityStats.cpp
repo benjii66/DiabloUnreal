@@ -53,6 +53,7 @@ void UEntityStats::SetMana(float _mana)
 		mana = 0;
 }
 
+
 bool UEntityStats::IsDead_Implementation()
 {
 	if (life <= 0)

@@ -6,7 +6,6 @@
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
-#include "UD_LifeBottle.h"
 #include "UD_PlayerCharacter.h"
 #include "Engine/World.h"
 
@@ -54,9 +53,7 @@ void AUD_PlayerControllerCharacter::SetNewMoveDestination(const FVector DestLoca
 
 		// We need to issue move command only if far enough in order for walk animation to play correctly
 		if ((Distance > 120.0f))
-		{
 			UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, DestLocation);
-		}
 	}
 }
 

@@ -23,6 +23,18 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+
+	UPROPERTY(EditAnywhere)
+		int playerLife = 20;
+
+	UPROPERTY(EditAnywhere)
+		int playerMana = 20;
+
+	UFUNCTION()
+		void GetLife();
+	UFUNCTION()
+		void GetMana();
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -40,6 +52,8 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* CameraComponent;
 
@@ -58,4 +72,5 @@ private:
 
 
 	void Move();
+
 };

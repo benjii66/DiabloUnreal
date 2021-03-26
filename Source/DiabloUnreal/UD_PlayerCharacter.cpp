@@ -71,6 +71,8 @@ AUD_PlayerCharacter::AUD_PlayerCharacter()
 void AUD_PlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	GetLife();
+	GetMana();
 }
 
 // Called every frame
@@ -102,5 +104,16 @@ void AUD_PlayerCharacter::Move()
 			CursorToWorld->SetWorldRotation(_cursorRotator);
 		}
 	}
+}
+
+void AUD_PlayerCharacter::GetLife()
+{
+	playerLife = GetEntityStats()->life;
+
+}
+
+void AUD_PlayerCharacter::GetMana()
+{
+	playerMana= GetEntityStats()->mana;
 }
 

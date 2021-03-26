@@ -56,8 +56,9 @@ void UUD_Inventory::UseItem(int _id, UEntityStats* _statTarget)
 
 void UUD_Inventory::DisplayInventory()
 {
-	for (auto& _element : allItems)
-		_element.Value->ItemToString();
+
+	/*for (auto& _element : allItems)
+		_element.Value->ItemToString();*/
 
 }
 
